@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-child1',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Child1Component implements OnInit {
 
   constructor() { }
+
+  @Input() Sharevalue;
 
   ngOnInit(): void {
   }

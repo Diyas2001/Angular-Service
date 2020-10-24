@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedService} from '../Services/SharedService';
 
 @Component({
   selector: 'app-parent1',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Parent1Component implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService: SharedService) {}
+  Sharevalue = this.sharedService.getValue();
 
   ngOnInit(): void {
   }
-
 }
